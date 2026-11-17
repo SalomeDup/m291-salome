@@ -119,3 +119,42 @@ function appliquerFiltres() {
 champRecherche.addEventListener("input", function () {
   appliquerFiltres();
 });
+
+// ----- Formulaire « Invente ta pièce » (semaine 12) -----
+const formulaire = document.getElementById("inventer");
+
+formulaire.addEventListener("submit", function (event) {
+  // Sans cette ligne, le navigateur enverrait le formulaire et rechargerait la page.
+  event.preventDefault();
+
+  const donnees = new FormData(formulaire);
+  const titre = donnees.get("titre").trim();
+  const categorie = donnees.get("categorie");
+
+  const erreurs = [];
+
+  if (titre.length < 3) {
+    erreurs.push("Donne un nom à ta pièce, au moins 3 lettres.");
+  }
+  if (categorie === "") {
+    erreurs.push("Choisis la partie de la figurine.");
+  }
+
+  const zoneErreurs = document.getElementById("erreurs");
+  if (erreurs.length > 0) {
+    zoneErreurs.textContent = "Erreur : " + erreurs.join(" ");
+    return;
+  }
+  zoneErreurs.textContent = "";
+
+  tousLesLieux.unshift({
+    id: tousLesLieux.length + 1,
+    titre: titre,
+    categorie: categorie,
+    prix: 1.5,
+    disponible: true,
+    image: "image/craotor-basique.png"
+  });
+  appliquerFiltres();
+  formulaire.reset();
+});

@@ -10,3 +10,5 @@ personalisation de lego (choix du chapeaux, t-shirt, pantalon, accessoire...)
 ## Comment me trouver
 - GitHub : SalomeDup
  
+
+Les fiches ajoutées par le formulaire restent affichées jusqu'au rechargement de la page : il n'y a pas de serveur pour les enregistrer.

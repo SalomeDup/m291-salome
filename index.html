@@ -35,6 +35,22 @@
     <input type="search" id="recherche" class="champ">
     <p id="aucun-resultat" hidden>Aucune pièce ne correspond à ta recherche.</p>
 
+    <form id="inventer" class="formulaire">
+      <h2>Invente ta pièce</h2>
+      <label for="champ-titre">Nom de ta pièce</label>
+      <input type="text" id="champ-titre" name="titre" class="champ">
+      <label for="champ-categorie">Pour quelle partie ?</label>
+      <select id="champ-categorie" name="categorie" class="champ">
+        <option value="">Choisis…</option>
+        <option value="cheveux">Cheveux</option>
+        <option value="tete">Tête</option>
+        <option value="torse">Torse</option>
+        <option value="jambes">Jambes</option>
+      </select>
+      <p id="erreurs" aria-live="polite"></p>
+      <button type="submit" class="bouton bouton--valider">Ajouter ma pièce</button>
+    </form>
+
     <section id="liste-cartes" class="liste-cartes" aria-label="Options de personnalisation"></section>
 
     <div class="ligne-actions">
