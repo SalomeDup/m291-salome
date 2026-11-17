@@ -88,22 +88,8 @@ function filtrerParCategorie(categorie) {
     bouton.setAttribute("aria-pressed", bouton.dataset.categorie === categorieChoisie);
   }
 
-  if (categorieChoisie === null) {
-    zoneEtat.textContent = "";
-    afficherLieux(tousLesLieux);
-    return;
-  }
-
-  const fiches = tousLesLieux.filter(function (option) {
-    return option.categorie === categorieChoisie;
-  });
-
-  if (fiches.length === 0) {
-    zoneEtat.textContent = "Aucune option dans cette catégorie pour le moment.";
-  } else {
-    zoneEtat.textContent = "";
-  }
-  afficherLieux(fiches);
+  // La recherche et la catégorie se combinent : appliquerFiltres fait le tri.
+  appliquerFiltres();
 }
 
 for (const bouton of boutons) {
@@ -111,3 +97,25 @@ for (const bouton of boutons) {
     filtrerParCategorie(bouton.dataset.categorie);
   });
 }
+
+// ----- Recherche (semaine 12) -----
+// Timéo cherche par titre ou par catégorie.
+const champRecherche = document.getElementById("recherche");
+
+function appliquerFiltres() {
+  const texte = champRecherche.value.trim().toLowerCase();
+
+  const resultats = tousLesLieux.filter(function (option) {
+    const texteOk = option.titre.toLowerCase().includes(texte)
+      || option.categorie.toLowerCase().includes(texte);
+    const categorieOk = categorieChoisie === null || option.categorie === categorieChoisie;
+    return texteOk && categorieOk;
+  });
+
+  afficherLieux(resultats);
+  document.getElementById("aucun-resultat").hidden = resultats.length > 0;
+}
+
+champRecherche.addEventListener("input", function () {
+  appliquerFiltres();
+});
