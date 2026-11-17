@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S09-AV2 — Sélecteur :has()</title>
+<style>
+  :root {
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-favori: #f59e0b;
+    --color-favori-bg: #fffbeb;
+    --space-2: 8px;
+    --space-3: 16px;
+    --radius-card: 12px;
+    --font-sans: system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 420px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  /* Carte "normale" : bordure neutre, fond blanc. */
+  .carte {
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  /* Le coeur de l'exercice : AUCUNE ligne de JavaScript.
+     :has() permet de styliser le PARENT .carte en fonction de
+     l'état de son ENFANT .toggle-favori (coché ou non). */
+  .carte:has(.toggle-favori:checked) {
+    background: var(--color-favori-bg);
+    border-color: var(--color-favori);
+  }
+
+  .carte h3 {
+    margin: 0;
+  }
+
+  .carte .commune {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .favori-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .favori-label input {
+    width: 20px;
+    height: 20px;
+  }
+</style>
+</head>
+<body>
+  <h1>Cochez "Favori" sans JavaScript</h1>
+
+  <article class="carte">
+    <h3>Lavaux Panoramic</h3>
+    <p class="commune">Chexbres</p>
+    <label class="favori-label">
+      <input type="checkbox" class="toggle-favori">
+      ⭐ Favori
+    </label>
+  </article>
+
+  <article class="carte">
+    <h3>Parc des Bastions</h3>
+    <p class="commune">Genève</p>
+    <label class="favori-label">
+      <input type="checkbox" class="toggle-favori">
+      ⭐ Favori
+    </label>
+  </article>
+</body>
+</html>

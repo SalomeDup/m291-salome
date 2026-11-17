@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Figurine Creator — Personnalise ta figurine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="entete">
+    <h1>Personnalise ta figurine !</h1>
+  </header>
+
+  <main class="contenu-principal">
+    <section class="carte-figurine" aria-label="Aperçu et choix de la figurine">
+
+      <div class="apercu-figurine">
+        <img src="image/craotor-basique.png" alt="Aperçu de la figurine en cours de personnalisation">
+      </div>
+
+      <nav class="choix-categories" aria-label="Catégories à personnaliser">
+        <button type="button" class="bouton-categorie bouton-categorie--vert" data-categorie="cheveux" aria-pressed="false">Cheveux</button>
+        <button type="button" class="bouton-categorie bouton-categorie--rouge" data-categorie="tete" aria-pressed="false">Tête</button>
+        <button type="button" class="bouton-categorie bouton-categorie--jaune" data-categorie="torse" aria-pressed="false">Torse</button>
+        <button type="button" class="bouton-categorie bouton-categorie--orange" data-categorie="jambes" aria-pressed="false">Jambes</button>
+      </nav>
+
+    </section>
+
+    <p id="etat" role="status"></p>
+    <section id="liste-cartes" class="liste-cartes" aria-label="Options de personnalisation"></section>
+
+    <div class="ligne-actions">
+      <button type="button" class="bouton bouton--alea">🎲 Aléatoire</button>
+      <button type="button" class="bouton bouton--prix">
+        <span class="prix-label">Prix</span>
+        <span class="prix-valeur">0.95 CHF</span>
+      </button>
+    </div>
+
+    <button type="button" class="bouton bouton--reset">Réinitialiser</button>
+
+    <button type="button" class="bouton bouton--valider">Valider ✓</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

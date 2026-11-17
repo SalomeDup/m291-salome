@@ -1,0 +1,57 @@
+/* ============================================================
+   S09-AV1 — Composants rétro-compatibles avec les Container
+   Queries CSS (@container)
+
+   Principe : une media query (@media) réagit à la largeur de
+   TOUTE la fenêtre. Une container query (@container) réagit à
+   la largeur du PARENT direct de l'élément — utile quand la même
+   carte peut se trouver dans une colonne étroite ou une zone large,
+   sur le même écran.
+   ============================================================ */
+
+/* Étape 1 : on déclare le conteneur parent comme "contexte de
+   conteneur". container-type: inline-size = on observe sa largeur. */
+.carte-conteneur {
+  container-type: inline-size;
+  container-name: carte;
+}
+
+/* Carte de base : disposition verticale par défaut (image/titre
+   au-dessus, texte en dessous) — c'est ce qui s'affiche quand le
+   conteneur est étroit. */
+.carte {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 8px);
+  background-color: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-card, 12px);
+  padding: var(--space-3, 16px);
+}
+
+.carte .carte-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-bg, #f8fafc);
+  border-radius: var(--radius-btn, 8px);
+}
+
+/* Étape 2 : dès que le CONTENEUR (pas la fenêtre) atteint 400px
+   de large, on bascule la carte en disposition horizontale. */
+@container carte (min-width: 400px) {
+  .carte {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .carte .carte-media {
+    width: 140px;
+    flex: 0 0 auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Étape 3 (test) : placez .carte-conteneur une fois dans une
+   colonne étroite (ex: largeur 280px) et une fois dans une zone
+   large (ex: largeur 600px) sur la MÊME page. La carte doit changer
+   de disposition indépendamment de la largeur de la fenêtre. */

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test — Container Queries</title>
+<style>
+  :root { --space-2: 8px; --space-3: 16px; --color-surface:#fff; --color-border:#e2e8f0; --color-bg:#f8fafc; --radius-card:12px; --radius-btn:8px; }
+  body { font-family: system-ui, sans-serif; padding: 24px; display: flex; flex-direction: column; gap: 32px; }
+  .zone-etroite { width: 280px; border: 2px dashed #0284c7; padding: 12px; }
+  .zone-large { width: 600px; border: 2px dashed #16a34a; padding: 12px; }
+  .zone-label { font-weight: 700; margin-bottom: 8px; }
+</style>
+<link rel="stylesheet" href="container-queries.css">
+</head>
+<body>
+  <div>
+    <p class="zone-label">Colonne étroite (280px) — carte en vertical attendu</p>
+    <div class="zone-etroite">
+      <div class="carte-conteneur">
+        <article class="carte">
+          <div class="carte-media"></div>
+          <h3>Titre du lieu</h3>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="zone-label">Zone large (600px) — carte en horizontal attendu</p>
+    <div class="zone-large">
+      <div class="carte-conteneur">
+        <article class="carte">
+          <div class="carte-media"></div>
+          <h3>Titre du lieu</h3>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

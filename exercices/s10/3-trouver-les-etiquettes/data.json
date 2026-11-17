@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "titre": "Casquette bleue",
+    "categorie": "cheveux",
+    "prix": 2.5,
+    "disponible": true,
+    "image": "images/cheveux-01.png"
+  },
+  {
+    "id": 2,
+    "titre": "Casque de pompier",
+    "categorie": "cheveux",
+    "prix": 3.2,
+    "disponible": true,
+    "image": "images/cheveux-02.png"
+  },
+  {
+    "id": 3,
+    "titre": "Chapeau de pirate",
+    "categorie": "cheveux",
+    "prix": 2.9,
+    "disponible": true,
+    "image": "images/cheveux-03.png"
+  },
+  {
+    "id": 4,
+    "titre": "Cheveux bouclés roux",
+    "categorie": "cheveux",
+    "prix": 1.9,
+    "disponible": true,
+    "image": "images/cheveux-04.png"
+  },
+  {
+    "id": 5,
+    "titre": "Bonnet rayé",
+    "categorie": "cheveux",
+    "prix": 1.5,
+    "disponible": false,
+    "image": "images/cheveux-05.png"
+  },
+  {
+    "id": 6,
+    "titre": "Couronne dorée",
+    "categorie": "cheveux",
+    "prix": 3.9,
+    "disponible": true,
+    "image": "images/cheveux-06.png"
+  },
+  {
+    "id": 7,
+    "titre": "Casque de chevalier",
+    "categorie": "cheveux",
+    "prix": 3.5,
+    "disponible": true,
+    "image": "images/cheveux-07.png"
+  },
+  {
+    "id": 8,
+    "titre": "Chapeau de cowboy",
+    "categorie": "cheveux",
+    "prix": 2.2,
+    "disponible": true,
+    "image": "images/cheveux-08.png"
+  },
+  {
+    "id": 9,
+    "titre": "Visage souriant",
+    "categorie": "tete",
+    "prix": 1.5,
+    "disponible": true,
+    "image": "images/tete-01.png"
+  },
+  {
+    "id": 10,
+    "titre": "Visage étonné",
+    "categorie": "tete",
+    "prix": 1.5,
+    "disponible": true,
+    "image": "images/tete-02.png"
+  },
+  {
+    "id": 11,
+    "titre": "Visage avec lunettes",
+    "categorie": "tete",
+    "prix": 2.0,
+    "disponible": true,
+    "image": "images/tete-03.png"
+  },
+  {
+    "id": 12,
+    "titre": "Tête de robot",
+    "categorie": "tete",
+    "prix": 3.0,
+    "disponible": true,
+    "image": "images/tete-04.png"
+  },
+  {
+    "id": 13,
+    "titre": "Tête extraterrestre",
+    "categorie": "tete",
+    "prix": 3.2,
+    "disponible": false,
+    "image": "images/tete-05.png"
+  },
+  {
+    "id": 14,
+    "titre": "Visage avec moustache",
+    "categorie": "tete",
+    "prix": 2.1,
+    "disponible": true,
+    "image": "images/tete-06.png"
+  },
+  {
+    "id": 15,
+    "titre": "Tête de super-héros",
+    "categorie": "tete",
+    "prix": 2.8,
+    "disponible": true,
+    "image": "images/tete-07.png"
+  },
+  {
+    "id": 16,
+    "titre": "Visage avec taches de rousseur",
+    "categorie": "tete",
+    "prix": 1.8,
+    "disponible": true,
+    "image": "images/tete-08.png"
+  },
+  {
+    "id": 17,
+    "titre": "T-shirt rayé",
+    "categorie": "torse",
+    "prix": 2.0,
+    "disponible": true,
+    "image": "images/torse-01.png"
+  },
+  {
+    "id": 18,
+    "titre": "Veste de pompier",
+    "categorie": "torse",
+    "prix": 3.5,
+    "disponible": true,
+    "image": "images/torse-02.png"
+  },
+  {
+    "id": 19,
+    "titre": "Pull à capuche",
+    "categorie": "torse",
+    "prix": 2.7,
+    "disponible": true,
+    "image": "images/torse-03.png"
+  },
+  {
+    "id": 20,
+    "titre": "Gilet de pirate",
+    "categorie": "torse",
+    "prix": 3.1,
+    "disponible": false,
+    "image": "images/torse-04.png"
+  },
+  {
+    "id": 21,
+    "titre": "Combinaison spatiale",
+    "categorie": "torse",
+    "prix": 4.2,
+    "disponible": true,
+    "image": "images/torse-05.png"
+  },
+  {
+    "id": 22,
+    "titre": "Chemise à carreaux",
+    "categorie": "torse",
+    "prix": 2.4,
+    "disponible": true,
+    "image": "images/torse-06.png"
+  },
+  {
+    "id": 23,
+    "titre": "Armure de chevalier",
+    "categorie": "torse",
+    "prix": 4.5,
+    "disponible": true,
+    "image": "images/torse-07.png"
+  },
+  {
+    "id": 24,
+    "titre": "Maillot de sport",
+    "categorie": "torse",
+    "prix": 2.6,
+    "disponible": true,
+    "image": "images/torse-08.png"
+  },
+  {
+    "id": 25,
+    "titre": "Jean bleu",
+    "categorie": "jambes",
+    "prix": 2.0,
+    "disponible": true,
+    "image": "images/jambes-01.png"
+  },
+  {
+    "id": 26,
+    "titre": "Pantalon de pirate",
+    "categorie": "jambes",
+    "prix": 2.9,
+    "disponible": true,
+    "image": "images/jambes-02.png"
+  },
+  {
+    "id": 27,
+    "titre": "Jambes robotiques",
+    "categorie": "jambes",
+    "prix": 3.8,
+    "disponible": true,
+    "image": "images/jambes-03.png"
+  },
+  {
+    "id": 28,
+    "titre": "Short de sport",
+    "categorie": "jambes",
+    "prix": 1.7,
+    "disponible": true,
+    "image": "images/jambes-04.png"
+  },
+  {
+    "id": 29,
+    "titre": "Pantalon à carreaux",
+    "categorie": "jambes",
+    "prix": 2.3,
+    "disponible": false,
+    "image": "images/jambes-05.png"
+  },
+  {
+    "id": 30,
+    "titre": "Jambes d'astronaute",
+    "categorie": "jambes",
+    "prix": 4.0,
+    "disponible": true,
+    "image": "images/jambes-06.png"
+  }
+]
