@@ -131,6 +131,21 @@ button {
   color: #FFFFFF;
   background: var(--brique);
   border-bottom: 4px solid var(--brique-ombre);
+  /* Les boutons sont maintenant des liens <a> : on centre le texte
+     et on enlève le soulignement. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Lien « Retour » en haut des pages de catégorie */
+.lien-retour {
+  display: inline-block;
+  margin-bottom: var(--space-1);
+  font-family: var(--font-titre);
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 /* Tenons de la brique Lego : une rangée de petits plots

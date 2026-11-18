@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheveux — Figurine Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- data-categorie dit à app.js quelles cartes montrer sur cette page -->
+<body data-categorie="cheveux">
+  <header class="entete">
+    <h1>Cheveux</h1>
+  </header>
+
+  <main class="contenu-principal">
+    <a href="index.html" class="lien-retour">← Retour à ma figurine</a>
+
+    <p id="etat" role="status"></p>
+
+    <label for="recherche" class="label-recherche">Chercher une pièce</label>
+    <input type="search" id="recherche" class="champ">
+    <p id="aucun-resultat" hidden>Aucune pièce ne correspond à ta recherche.</p>
+
+    <section id="liste-cartes" class="liste-cartes" aria-label="Pièces : Cheveux"></section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

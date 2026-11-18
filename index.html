@@ -21,37 +21,13 @@
       </div>
 
       <nav class="choix-categories" aria-label="Catégories à personnaliser">
-        <button type="button" class="bouton-categorie bouton-categorie--vert" data-categorie="cheveux" aria-pressed="false">Cheveux</button>
-        <button type="button" class="bouton-categorie bouton-categorie--rouge" data-categorie="tete" aria-pressed="false">Tête</button>
-        <button type="button" class="bouton-categorie bouton-categorie--jaune" data-categorie="torse" aria-pressed="false">Torse</button>
-        <button type="button" class="bouton-categorie bouton-categorie--orange" data-categorie="jambes" aria-pressed="false">Jambes</button>
+        <a href="cheveux.html" class="bouton-categorie bouton-categorie--vert">Cheveux</a>
+        <a href="tete.html" class="bouton-categorie bouton-categorie--rouge">Tête</a>
+        <a href="torse.html" class="bouton-categorie bouton-categorie--jaune">Torse</a>
+        <a href="jambes.html" class="bouton-categorie bouton-categorie--orange">Jambes</a>
       </nav>
 
     </section>
-
-    <p id="etat" role="status"></p>
-
-    <label for="recherche" class="label-recherche">Chercher une pièce ou une catégorie</label>
-    <input type="search" id="recherche" class="champ">
-    <p id="aucun-resultat" hidden>Aucune pièce ne correspond à ta recherche.</p>
-
-    <form id="inventer" class="formulaire">
-      <h2>Invente ta pièce</h2>
-      <label for="champ-titre">Nom de ta pièce</label>
-      <input type="text" id="champ-titre" name="titre" class="champ">
-      <label for="champ-categorie">Pour quelle partie ?</label>
-      <select id="champ-categorie" name="categorie" class="champ">
-        <option value="">Choisis…</option>
-        <option value="cheveux">Cheveux</option>
-        <option value="tete">Tête</option>
-        <option value="torse">Torse</option>
-        <option value="jambes">Jambes</option>
-      </select>
-      <p id="erreurs" aria-live="polite"></p>
-      <button type="submit" class="bouton bouton--valider">Ajouter ma pièce</button>
-    </form>
-
-    <section id="liste-cartes" class="liste-cartes" aria-label="Options de personnalisation"></section>
 
     <div class="ligne-actions">
       <button type="button" class="bouton bouton--alea">🎲 Aléatoire</button>
@@ -63,7 +39,14 @@
 
     <button type="button" class="bouton bouton--reset">Réinitialiser</button>
 
-    <button type="button" class="bouton bouton--valider">Valider ✓</button>
+    <form id="enregistrer" class="formulaire">
+      <h2>Enregistre ton personnage</h2>
+      <label for="champ-prenom">Prénom de ton personnage</label>
+      <input type="text" id="champ-prenom" name="prenom" class="champ" autocomplete="off">
+      <p id="erreurs" aria-live="polite"></p>
+      <button type="submit" class="bouton bouton--valider">Enregistrer ✓</button>
+      <p id="confirmation" role="status"></p>
+    </form>
   </main>
 
   <script src="app.js"></script>
